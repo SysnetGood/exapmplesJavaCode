@@ -7,5 +7,12 @@ public class Main {
         dashboardPage.getPopUp().verifySaveButton();
         dashboardPage.getPopUp().verifyCancelButton();
         dashboardPage.getPopUp().verifyCloseButton();
+
+
+
+        MainPage mainPage = new MainPage();
+        mainPage.verifyCancelButton();
+        mainPage.verifyCloseButton();
+        mainPage.verifySaveButton();
     }
 }
