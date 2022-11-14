@@ -1,0 +1,4 @@
+1,"Sosiski",10.5
+2,"Malako",2.5
+4,"Yougurt",3.4
+3,"Hleb/Gleb",45.3
