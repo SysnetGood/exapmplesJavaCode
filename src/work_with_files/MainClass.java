@@ -41,7 +41,7 @@ public class MainClass {
     }*/
 
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         MainClass mainClass = new MainClass();
         List<String> magaz = mainClass.readFile();
 
@@ -66,7 +66,7 @@ public class MainClass {
         magaz.add(afterChanges);
         BufferedWriter bufferedWriter = null;
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter("C:\\Q1822\\exapmplesJavaCode\\src\\resources\\file_products.txt"));
+            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\resources\\file_products.txt"));
             for (String str1 : magaz
             ) {
                 bufferedWriter.write(str1);
@@ -106,5 +106,34 @@ public class MainClass {
         double stoimost = Double.parseDouble(array[2]);
         System.out.println("stoimost = " + stoimost);
         return magaz;
+    }*/
+
+
+    public static void main(String[] args) {
+        List<String[]> arrays = new ArrayList<>();
+
+        List<String> resultOfSerching = new ArrayList<>();
+
+        String s1 = "Ivanov Ivan Ivanovich";
+        String s2 = "Ivanov Petr Ivanovich";
+        String s3 = "Sidorov Petr Ivanovich";
+        String s4 = "Sidorov Valeriy Ivanovich";
+
+        arrays.add(s1.split(" "));
+        arrays.add(s2.split(" "));
+        arrays.add(s3.split(" "));
+        arrays.add(s4.split(" "));
+
+        for (String[] fio : arrays) {
+            if (fio[0].equals("Petrenko")) {
+                resultOfSerching.add(fio[0] + " " + fio[1] + " " + fio[2]);
+            }
+        }
+        if (resultOfSerching.size() == 0) {
+            System.out.println("takogo sotrudnika ne naydeno!");
+        }
+
+
+        System.out.println(resultOfSerching);
     }
 }
